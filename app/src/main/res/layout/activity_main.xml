@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        '
+
+        <View
+            android:id="@+id/container_header"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/container_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/redefinir_dados"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_refresh"
+            app:layout_constraintEnd_toEndOf="@id/container_header"
+            app:layout_constraintTop_toTopOf="@id/container_header" />
+
+        <View
+            android:id="@+id/container_resultado"
+            android:layout_width="308dp"
+            android:layout_height="119dp"
+            android:layout_margin="25dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/container_resultado"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_calcular"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/edit_idade"
+            android:layout_width="156dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="84dp"
+            android:gravity="center"
+            android:hint="@string/hint_idade"
+            android:inputType="number"
+            android:maxLength="3"
+            android:padding="15dp"
+            android:textColorHint="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.558"
+            app:layout_constraintStart_toEndOf="@+id/edit_peso"
+            app:layout_constraintTop_toBottomOf="@+id/container_header" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_cadastrar"
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_degrade_button"
+            android:text="CADASTRAR ATLETA"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_resultado" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_calcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_degrade_button"
+            android:text="@string/text_button_calcular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_idade"
+            app:layout_constraintVertical_bias="0.038" />
+
+        <TextView
+            android:id="@+id/text_resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="RESULTADO"
+            app:layout_constraintBottom_toBottomOf="@+id/container_resultado"
+            app:layout_constraintEnd_toEndOf="@+id/container_resultado"
+            app:layout_constraintHorizontal_bias="0.465"
+            app:layout_constraintStart_toStartOf="@+id/container_resultado"
+            app:layout_constraintTop_toTopOf="@+id/container_resultado"
+            app:layout_constraintVertical_bias="0.47" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_historico"
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_degrade_button"
+            android:text="CONSULTAR HISTÓRICO"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_cadastrar"
+            app:layout_constraintVertical_bias="0.28" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_nome"
+            android:layout_width="361dp"
+            android:layout_height="48dp"
+            android:hint="nome"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/bt_calcular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_header"
+            app:layout_constraintVertical_bias="0.100000024" />
+
+        <EditText
+            android:id="@+id/edit_peso"
+            android:layout_width="153dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="@string/hint_peso"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:padding="18sp"
+            android:textColorHint="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_nome" />
+
+        <TextView
+            android:id="@+id/txt_resultdo_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/purple_200"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/container_resultado"
+            app:layout_constraintEnd_toEndOf="@id/container_resultado"
+            app:layout_constraintStart_toStartOf="@id/container_resultado"
+            app:layout_constraintTop_toTopOf="@id/container_resultado" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

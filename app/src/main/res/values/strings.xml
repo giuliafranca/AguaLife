@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AguaLife</string>
+    <string name="hint_peso">peso(Kg)</string>
+    <string name="hint_idade"> idade</string>
+    <string name="text_button_calcular">Calcular consumo água</string>
+    <string name="text_definir_lembrete">Lembrete</string>
+    <string name="txt_informe_peso"> Informe o seu peso</string>
+    <string name="txt_informe_idade"> Informe a sua idade</string>
+    <string name="builder_mensagem"> Deseja apagar todos os dados?</string>
+    <string name="text_hora">00</string>
+    <string name="text_dois_pontos">:</string>
+    <string name="text_minuto">00</string>
+    <string name="txt_button_alarme">Alarme</string>
+    <string name="text_alarme">Hora da hidratação</string>
+
+</resources>
